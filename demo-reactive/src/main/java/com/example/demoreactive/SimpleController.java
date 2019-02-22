@@ -19,7 +19,7 @@ public class SimpleController {
     public Mono<BlogPost[]> getBlogPosts() {
         return webClient
             .get()
-            .uri("https://jsonplaceholder.typicode.com/posts?userId=1")
+            .uri("/posts?userId=1")
             .retrieve()
             .bodyToMono(BlogPost[].class);
     }
